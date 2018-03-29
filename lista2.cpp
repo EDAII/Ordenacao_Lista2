@@ -67,15 +67,17 @@ int main(int argc, char const *argv[]) {
  }
 
  if (tam <= 20){
+   cout << "Vetor 1 = ";
     for (size_t i = 0; i < tam; i++)
       cout << vetor[i] << " ";
+    cout << endl;
   }
-	cout << endl;
 	if (tam <= 20){
+    cout << "Vetor 2 = ";
     for (size_t i = 0; i < tam; i++)
       cout << vetor2[i] << " ";
+    cout << endl;
   }
-	cout << endl;
 	getrusage(RUSAGE_SELF, &tempo_inicial);
 		shellSort(vetor,tam);
 	getrusage(RUSAGE_SELF, &tempo_final);
@@ -84,8 +86,9 @@ int main(int argc, char const *argv[]) {
 	if (tam <= 20){
 	    for (size_t i = 0; i < tam; i++)
 	      cout << vetor[i] << " ";
+      cout << endl;
 	  }
-	cout << endl;
+
 
 	getrusage(RUSAGE_SELF, &tempo_inicial);
 		insertionSort(vetor2,tam);
@@ -95,9 +98,8 @@ int main(int argc, char const *argv[]) {
 	if (tam <= 20){
 	    for (size_t i = 0; i < tam; i++)
 	      cout << vetor2[i] << " ";
+      cout << endl;
 	  }
-
-	cout << endl;
 
   printf("Tempo Shell Sort: %lf\n",tempo);
   printf("Tempo Insertion Sort: %lf\n",tempo2);
